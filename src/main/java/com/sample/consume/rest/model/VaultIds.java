@@ -1,10 +1,12 @@
 package com.sample.consume.rest.model;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties (ignoreUnknown = true)
+@XmlRootElement
 public class VaultIds {
-
 	private int id;
 	private String name;
 	private String url;

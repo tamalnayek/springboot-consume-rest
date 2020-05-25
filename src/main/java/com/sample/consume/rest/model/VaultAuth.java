@@ -1,15 +1,19 @@
 package com.sample.consume.rest.model;
 
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties (ignoreUnknown = true)
+@XmlRootElement
 public class VaultAuth {
-	
 	private String responseStatus;
 	private String sessionId;
 	private String userId;
 	private String vaultId;
-	private VaultIds vaultIds;
+	private List<VaultIds> vaultIds;
 	
 	public String getResponseStatus() {
 		return responseStatus;
@@ -35,10 +39,10 @@ public class VaultAuth {
 	public void setVaultId(String vaultId) {
 		this.vaultId = vaultId;
 	}
-	public VaultIds getVaultIds() {
+	public List<VaultIds> getVaultIds() {
 		return vaultIds;
 	}
-	public void setVaultIds(VaultIds vaultIds) {
+	public void setVaultIds(List<VaultIds> vaultIds) {
 		this.vaultIds = vaultIds;
 	}
 	
